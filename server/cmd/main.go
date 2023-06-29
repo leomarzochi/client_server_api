@@ -62,7 +62,7 @@ func saveQuotationToDB(q *models.Quotation) error {
 	}
 	defer db.Close()
 
-	stmt, err := db.Prepare("INSERT INTO cotacao (name, code, codein, bid) VALUES (?, ?, ?, ?)")
+	stmt, err := db.Prepare("INSERT INTO cotacoes (name, code, codein, bid) VALUES (?, ?, ?, ?)")
 	if err != nil {
 		return err
 	}
